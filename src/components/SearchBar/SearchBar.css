@@ -9,6 +9,7 @@
 .search-form {
   width: 150px;
   font-size: 14px;
+
 }
 .search-form input {
   text-align: center;
@@ -16,6 +17,7 @@
 }
 .image-wrapper {
   height: 50px;
+
 }
 
 .logo-image {
@@ -28,4 +30,8 @@
 
 .social {
   width: 50px;
+}
+
+.image-wrapper i {
+
 }

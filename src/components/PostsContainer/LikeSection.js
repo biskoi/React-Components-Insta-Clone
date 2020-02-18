@@ -4,6 +4,19 @@
 import React from "react";
 
 const LikeSection = props => {
+
+  let liked = false;
+
+  function likeHandler(){
+    if (liked === false){
+      props.setLikes(props.likes + 1)
+      liked = true;
+    } else {
+      props.setLikes(props.likes -1)
+      liked = false;
+    }
+  }
+
   return (
     <div>
     <div
@@ -11,15 +24,15 @@ const LikeSection = props => {
       key="likes-icons-container"
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" />
+        <i className="far fa-heart" onClick = {() => likeHandler()}/>
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
       </div>
     </div>
     <p className="like-number">
-      
-      likes</p>
+    Likes: {props.likes}
+    </p>
 </div>
   )
 };
