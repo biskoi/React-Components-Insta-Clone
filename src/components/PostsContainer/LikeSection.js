@@ -18,22 +18,25 @@ const LikeSection = props => {
   }
 
   return (
-    <div>
-    <div
-      className="like-section"
-      key="likes-icons-container"
-    >
-      <div className="like-section-wrapper">
-        <i className="far fa-heart" onClick = {() => likeHandler()}/>
+    <div className = 'like-container'>
+
+      <div className="like-section" key="likes-icons-container">
+
+        <div className="like-section-wrapper">
+          <i className="far fa-heart" onClick = {() => likeHandler()}/>
+        </div>
+
+        <div className="like-section-wrapper">
+          <i className="far fa-comment" />
+        </div>
+
       </div>
-      <div className="like-section-wrapper">
-        <i className="far fa-comment" />
-      </div>
+
+      <p className="like-number">
+       {props.likes} likes
+      </p>
+
     </div>
-    <p className="like-number">
-    Likes: {props.likes}
-    </p>
-</div>
   )
 };
 

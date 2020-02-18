@@ -14,10 +14,12 @@
 .search-form input {
   text-align: center;
   color: #262626;
+  width: 170%;
 }
 .image-wrapper {
   height: 50px;
-
+  display: flex;
+  align-items: center;
 }
 
 .logo-image {
